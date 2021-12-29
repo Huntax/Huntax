@@ -1,4 +1,7 @@
 
+![Logo](https://media.discordapp.net/attachments/795866620412428330/925815291429126275/huntax-banner-border-radius.png)
+
+
 # HuntaX
 
 An Impending tool for Beginners | Hunt down your target by grabbing crucial information 🔮
