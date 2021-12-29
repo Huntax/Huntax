@@ -44,3 +44,8 @@ Currently I'm a Intermidate in Javascript, so it's the basic language that's use
 #### How is the progress?
 
 As I'm not experienced, It's really getting hard for me to learn these all by my own. Any help in building this Open source tool would be appriciated. 
+## Badges
+
+![Package Control](https://img.shields.io/packagecontrol/dm/huntax) 
+
+![GitHub Repo stars](https://img.shields.io/github/stars/huntax/huntax)
