@@ -1,5 +1,5 @@
 
-![Logo](https://media.discordapp.net/attachments/795866620412428330/925815291429126275/huntax-banner-border-radius.png)
+![Logo](https://cdn.discordapp.com/attachments/795866620412428330/926185290660446218/huntax-bannernodified.jpg)
 
 ![Logo](https://cdn.discordapp.com/attachments/795866620412428330/926170208652120194/900px-gif.gif)
 
