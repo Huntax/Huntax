@@ -1,6 +1,8 @@
 echo '[!] Updating...'
+sudo apt update
 echo '[!] Installing Dependencies...'
-echo '    Python3'
+echo '    JS'
+sudo apt install nodejs npm
 echo '[!] Setting Permissions...'
 chmod 777 Tracker/result.txt
 echo
