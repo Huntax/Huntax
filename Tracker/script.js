@@ -1,3 +1,4 @@
+/*
 // grabbing file name for download page
 
 function getInputFromTextBox() {
@@ -13,7 +14,7 @@ var iSrc = ()=> {
 }
 iSrc ();
 
-
+*/
 
 // Grabbing OS Info from Landed user
 
