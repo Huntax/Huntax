@@ -1,17 +1,17 @@
-// grabbing input link for the fake video page from the user
+// grabbing file name for download page
 
 function getInputFromTextBox() {
-    var vdoId = document.getElementById("userInput").value;
+    var fileName = document.getElementById("userInput").value;
 }
 
-// replacing the embedded link with new video id
+// replacing the file name in html page
 
-const vdoLink = document.querySelector('#vdolnk');
+const nameChange = document.querySelector('#downloadhere');
 
-var isrc = ()=> {
-    vdoLink.src = `https://www.youtube.com/embed/${vdoId}?autoplay=1`;
+var iSrc = ()=> {
+    nameChange = `Download ${fileName}`;
 }
-
+iSrc ();
 
 
 
