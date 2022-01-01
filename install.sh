@@ -1,6 +1,7 @@
 echo '[!] Updating...'
 echo '[!] Installing Dependencies...'
 echo '    Python3'
-
-chmod 777 Tracker/
-
+echo '[!] Setting Permissions...'
+chmod 777 Tracker/result.txt
+echo
+echo '[!] Installed successfully'
