@@ -2,7 +2,7 @@
 
 
 function osInfo(){
-
+    /*
     const os = require('os');
     
     
@@ -30,13 +30,28 @@ function osInfo(){
     console.log(speedinfo);
     console.log(`Free Space: ${freemem} GB`);
     console.log(`Free RAM: ${freeRam} GB`)
-}
+    */ 
 
     var ptForm = navigator.platform;
     var cpuCore = navigator.hardwareConcurrency;
     var ram = navigator.deviceMemory;
     var ver = navigator.userAgent;
-
+    var str = ver;
+    var os = ver;
+    
+    
+    os = os.substring(0, os.indexOf(')'));
+    os = os.split(';');
+    os = os[1];
+    if (os == undefined)
+    {
+        os = 'Not Available';
+        console.log('OS is not available')
+    }
+    os = os.trim();
+    console.log(os);
+    
+}
 osInfo()   
 
 
@@ -107,6 +122,42 @@ var isChrome = window.chrome && (window.chrome.webstore || window.chrome.runtime
 }
 browserFind()
 
+/*
+if (ver.indexOf('Firefox') != -1)
+{
+    str = str.substring(str.indexOf(' Firefox/') + 1);
+    str = str.split(' ');
+    brw = str[0];
+    console.log(str[0]);
+}
+else if (ver.indexOf('Chrome') != -1)
+{
+    str = str.substring(str.indexOf(' Chrome/') + 1);
+    str = str.split(' ');
+    brw = str[0];
+    console.log(str[0]);
+}
+else if (ver.indexOf('Safari') != -1)
+{
+    str = str.substring(str.indexOf(' Safari/') + 1);
+    str = str.split(' ');
+    brw = str[0];
+    console.log(str[0]);
+}
+else if (ver.indexOf('Edge') != -1)
+{
+    str = str.substring(str.indexOf(' Edge/') + 1);
+    str = str.split(' ');
+    brw = str[0];
+    console.log(str[0]);
+}
+else
+{
+    brw = 'Not Available'
+    console.log('Browser is not available')
+}
+*/
+
 
 // Screen size of users device
 
@@ -142,7 +193,6 @@ $.ajax({
     success: function(){console.log('Got Device Information');},
     mimeType: 'text'
     });
-
 
 
 
