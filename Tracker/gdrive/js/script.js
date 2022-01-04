@@ -119,8 +119,3 @@ array.elements.push(singleElement);
 
 console.log(array);
 
-
-
-// Exporting data to creator's Server
-
-module.exports
