@@ -137,8 +137,12 @@ function info(){
     
     // Getting IP Address of the Landed User
     
-    /*function getLocation(){
     
+    /*function getLocation(){
+        
+        fetch('http://ip-api.com/json')
+        .then(results => results.json()).then(data => console.log(data.country));
+        
         fetch('https://api.ipify.org/?format=json')
         .then(results => results.json()).then(data => ipAdr= data.ip );
         
