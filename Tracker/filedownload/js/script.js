@@ -1,21 +1,3 @@
-/*
-// grabbing file name for download page
-
-function getInputFromTextBox() {
-    var fileName = document.getElementById("userInput").value;
-}
-
-// replacing the file name in html page
-
-const nameChange = document.querySelector('#downloadhere');
-
-var iSrc = ()=> {
-    nameChange = `Download ${fileName}`;
-}
-iSrc ();
-
-*/
-
 // Grabbing OS Info from Landed user
 
 
@@ -69,6 +51,9 @@ getLocation()
 function browserFind(){
 var browser = '';
 
+var isBlink = (isChrome || isOpera) && window.CSS;{
+    browser = 'Blink';}
+
 var isOpera = (window.opr && opr.addons) || window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;{
     browser = 'Opera';}
 
@@ -86,9 +71,6 @@ var isEdge = isIE && window.StyleMedia;{
 
 var isChrome = window.chrome && (window.chrome.webstore || window.chrome.runtime);{
     browser = 'Chrome';}
-
-var isBlink = (isChrome || isOpera) && window.CSS;{
-    browser = 'Blink';}
 }
 browserFind()
 
@@ -111,6 +93,3 @@ console.log(array);
 
 
 
-// Exporting data to creator's Server
-
-module.exports
