@@ -33,6 +33,31 @@ function osInfo(){
 }
 osInfo()   
 
+//GPU info 
+
+function getVideoCardInfo() {
+    const gl = document.createElement('canvas').getContext('webgl');
+
+    if (!gl) {
+        return {
+            error: "no webgl",
+        };
+    }
+    
+    const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+
+    if(debugInfo){
+        return {
+            vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
+            renderer:  gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
+        };
+    }
+
+    return {
+        error: "no WEBGL_debug_renderer_info",
+    };
+}
+getVideoCardInfo()
 
 
 // Getting IP Address of the Landed User
@@ -84,7 +109,8 @@ array.elements = elements;
 var singleElement = {
     "OS Name": osType,
     "Browser Name": browser,
-    "IP Address": ipAdr
+    "IP Address": ipAdr,
+    "GPU": renderer
 
 }
 array.elements.push(singleElement);
