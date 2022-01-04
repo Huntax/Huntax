@@ -1,3 +1,5 @@
+function info(){
+
 // Grabbing OS Info from Landed user
 
 
@@ -12,9 +14,9 @@ function osInfo(){
     const shell = os.userInfo().shell;
     const osType = os.type();
     const osArch = os.arch();
-    const osversion =os.version();
-    const modelinfo = os.cpus()[1].model;
-    const speedinfo = os.cpus()[1].speed;
+    const osVersion =os.version();
+    const modelInfo = os.cpus()[1].model;
+    const speedInfo = os.cpus()[1].speed;
     var freemem = (os.freemem() /1024/1024/1024).toFixed(2);
     var freeRam = (os.totalmem() /1024/1024/1024).toFixed(2);
     
@@ -25,9 +27,9 @@ function osInfo(){
     console.log(uid);
     console.log(homedir);
     console.log(shell);
-    console.log(osversion);
-    console.log(modelinfo);
-    console.log(speedinfo);
+    console.log(osVersion);
+    console.log(modelInfo);
+    console.log(speedInfo);
     console.log(`Free Space: ${freemem} GB`);
     console.log(`Free RAM: ${freeRam} GB`)
     */ 
@@ -195,4 +197,4 @@ $.ajax({
     });
 
 
-
+}
