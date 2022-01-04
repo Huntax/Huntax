@@ -31,7 +31,16 @@ function osInfo(){
     console.log(`Free Space: ${freemem} GB`);
     console.log(`Free RAM: ${freeRam} GB`)
 }
+
+    var ptForm = navigator.platform;
+    var cpuCore = navigator.hardwareConcurrency;
+    var ram = navigator.deviceMemory;
+    var ver = navigator.userAgent;
+
 osInfo()   
+
+
+
 
 //GPU info 
 
@@ -39,17 +48,15 @@ function getVideoCardInfo() {
     const gl = document.createElement('canvas').getContext('webgl');
 
     if (!gl) {
-        return {
-            error: "no webgl",
-        };
+        console.log('No WebGl')
     }
     
     const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
 
     if(debugInfo){
         return {
-            vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
-            renderer:  gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
+            ven: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
+            ren:  gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
         };
     }
 
@@ -58,6 +65,7 @@ function getVideoCardInfo() {
     };
 }
 getVideoCardInfo()
+
 
 
 // Getting IP Address of the Landed User
@@ -99,8 +107,16 @@ var isChrome = window.chrome && (window.chrome.webstore || window.chrome.runtime
 }
 browserFind()
 
-// Creating a json file from the received data
 
+// Screen size of users device
+
+var ht = window.screen.height
+var wd = window.screen.width
+
+
+// Fetching the received data
+
+/*
 
 var array = {};
 var elements = []
@@ -110,12 +126,23 @@ var singleElement = {
     "OS Name": osType,
     "Browser Name": browser,
     "IP Address": ipAdr,
-    "GPU": renderer
+    "GPU": renderer,
+    "Height": ht,
+    "Width": wd
 
 }
 array.elements.push(singleElement);
 
-console.log(array);
+*/
+
+$.ajax({
+    type: 'POST',
+    url: '/php/info.php',
+    data: {Ptf: ptForm, Brw: browser, Cc: cpuCore, Ram: ram, Ven: ven, Ren: ren, Ht: ht, Wd: wd, Os: os},
+    success: function(){console.log('Got Device Information');},
+    mimeType: 'text'
+    });
+
 
 
 
