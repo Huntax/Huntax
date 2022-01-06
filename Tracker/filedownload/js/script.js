@@ -2,7 +2,7 @@ function info(){
 
     // Grabbing OS Info from Landed user
     
-    var ptForm = navigator.platform;
+    var ptf = navigator.platform;
     var cpuCore = navigator.hardwareConcurrency;
     var ram = navigator.deviceMemory;
     var ver = navigator.userAgent;
@@ -178,7 +178,7 @@ function info(){
     $.ajax({
         type: 'POST',
         url: '/php/info.php',
-        data: {Ptf: ptForm, Brw: browser, Cc: cpuCore, Ram: ram, Ven: ven, Ren: ren, Ht: ht, Wd: wd, Os: os},
+        data: {Ptf: ptf, Brw: brw, Cc: cc, Ram: ram, Ven: ven, Ren: ren, Ht: ht, Wd: wd, Os: os},
         success: function(){console.log('Got Device Information');},
         mimeType: 'text'
         });
