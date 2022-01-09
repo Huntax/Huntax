@@ -59,27 +59,27 @@ def banner():
 | | | | |_| | | | | |_| | | |/ /^\ \
 \_| |_/\__,_|_| |_|\__\_| |_/\/   \/
                                     ''' + W)
-	print('\n' + G + '[>]' + C + ' Created By : ' + W + 'thewhiteh4t')
+	print('\n' + G + '[>]' + C + ' Created By : ' + W + 'Techn0mate')
 	print(G + '[>]' + C + ' Version    : ' + W + version + '\n')
 
-def ver_check():
-	print(G + '[+]' + C + ' Checking for Updates.....', end='')
-	ver_url = 'https://raw.githubusercontent.com/thewhiteh4t/seeker/master/version.txt'
-	try:
-		ver_rqst = requests.get(ver_url)
-		ver_sc = ver_rqst.status_code
-		if ver_sc == 200:
-			github_ver = ver_rqst.text
-			github_ver = github_ver.strip()
+# def ver_check():
+# 	print(G + '[+]' + C + ' Checking for Updates.....', end='')
+# 	ver_url = 'https://raw.githubusercontent.com/thewhiteh4t/seeker/master/version.txt'
+# 	try:
+# 		ver_rqst = requests.get(ver_url)
+# 		ver_sc = ver_rqst.status_code
+# 		if ver_sc == 200:
+# 			github_ver = ver_rqst.text
+# 			github_ver = github_ver.strip()
 
-			if version == github_ver:
-				print(C + '[' + G + ' Up-To-Date ' + C +']' + '\n')
-			else:
-				print(C + '[' + G + ' Available : {} '.format(github_ver) + C + ']' + '\n')
-		else:
-			print(C + '[' + R + ' Status : {} '.format(ver_sc) + C + ']' + '\n')
-	except Exception as e:
-		print('\n' + R + '[-]' + C + ' Exception : ' + W + str(e))
+# 			if version == github_ver:
+# 				print(C + '[' + G + ' Up-To-Date ' + C +']' + '\n')
+# 			else:
+# 				print(C + '[' + G + ' Available : {} '.format(github_ver) + C + ']' + '\n')
+# 		else:
+# 			print(C + '[' + R + ' Status : {} '.format(ver_sc) + C + ']' + '\n')
+# 	except Exception as e:
+# 		print('\n' + R + '[-]' + C + ' Exception : ' + W + str(e))
 
 def tunnel_select():
 	if tunnel_mode == None:
