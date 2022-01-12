@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/weather.png" type="image/png">
+    <title>Weather update</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<style>
+    section {
+        background: rgb(4, 151, 246);
+        background: radial-gradient(circle, rgba(4, 151, 246, 1) 0%, rgba(12, 53, 113, 1) 100%);
+    }
+
+    .btn {
+        padding: 6px 18px;
+        border-radius: 14px;
+        background-color: rgb(0, 102, 255);
+        color: white;
+        margin-top: 20px;
+    }
+
+    .btn:hover {
+        color: white;
+    }
+
+    .btn:focus {
+        color: rgb(199, 199, 199);
+    }
+</style>
+
+<body>
+    <section class="vh-100" style="background-color: #4B515D;">
+        <div class="container py-5 h-100">
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-8 col-lg-6 col-xl-4">
+
+                    <div class="card" style="color: #4B515D; border-radius: 35px;">
+                        <div class="card-body p-4">
+
+                            <div class="d-flex">
+                                <h6 class="flex-grow-1">Warsaw</h6>
+                                <h6>15:07</h6>
+                            </div>
+
+                            <div class="d-flex flex-column text-center mt-5 mb-4">
+                                <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
+                                <span class="small" style="color: #868B94">Stormy</span>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1" style="font-size: 1rem;">
+                                    <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1">
+                                            40 km/h </span></div>
+                                    <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1">
+                                            84% </span></div>
+                                    <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1">
+                                            0.2h </span></div>
+                                </div>
+                                <div>
+                                    <img src="./images/rstorm.webp" width="100px">
+                                </div>
+                            </div>
+                            <button class="btn">Update Location</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
