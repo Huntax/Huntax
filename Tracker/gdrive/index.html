@@ -5,11 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Drive</title>
+    <title>Access Required - Google Drive</title>
 </head>
 
-<body>
+<style>
+    body {
+        font-family: sans-serif;
+        max-width: 500px;
+        padding-top: 100px;
+        margin: auto;
+    }
 
+    .btn {
+        background: #4382e7;
+        border-radius: 2px;
+        border: none;
+        color: white;
+        padding: 7px 10px;
+        cursor: pointer;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .rs img {
+        margin-top: 110px;
+        padding-left: 20px;
+    }
+
+    @media screen and (max-width:400px) {
+        body {
+            padding: 100px 9px 0 9px;
+        }
+
+        .ls img {
+            width: 130px;
+        }
+
+        .rs img {
+            width: 50px;
+            margin-top: 80px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="ls"><img src="./images/Google-Drive-logo.png" width="200px" alt="">
+            <h3>You need permission</h3>
+            <p>Ask for access, or switch to an account with access.</p>
+            <button class="btn">Request Access</button>
+        </div>
+        <div class="rs">
+            <img width="70px" src="./images/locked.svg" alt="">
+        </div>
+    </div>
 </body>
 
 </html>
