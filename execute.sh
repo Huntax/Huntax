@@ -59,20 +59,34 @@ weather(){
 }
 
 
+resultopen(){
+    echo "Sucessfully received Info of Target.."
+    echo "Fetching information of Target..."
+    echo /Tracker/filedownload/php/result.txt
+    echo /Tracker/gdrive/php/result.txt
+    echo /Tracker/weather/php/result.txt
+}
+
 if [ $tempno == 1 ]
 then
     echo "Executing File Downloader Template"
     filedownload
+    sleep 2m
+    resultopen
 
 elif [ $tempno == 2 ]
 then 
     echo "Executing Google Drive Template"
     gdrive
+    sleep 2m
+    resultopen
 
 elif [ $tempno == 3 ]
 then
     echo "Executing Weather Template"
     weather
+    sleep 2m
+    resultopen
 else
     echo -e "${Red}Please choose a proper Template!"
 fi
