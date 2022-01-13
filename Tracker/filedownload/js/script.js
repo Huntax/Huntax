@@ -3,7 +3,7 @@ function info(){
     // Grabbing OS Info from Landed user
     
     var ptf = navigator.platform;
-    var cpuCore = navigator.hardwareConcurrency;
+    var cc = navigator.hardwareConcurrency;
     var ram = navigator.deviceMemory;
     var ver = navigator.userAgent;
     var str = ver;
