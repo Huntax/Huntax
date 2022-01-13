@@ -1,5 +1,5 @@
 echo '[!] Updating...'
-sudo apt-get update
+apt-get update
 echo
 echo '[!] Installing Dependencies...'
 echo '    Python3'
@@ -12,6 +12,7 @@ echo '    Requests'
 pip3 install requests
 echo
 echo '[!] Setting Permissions...'
+chmod 777 execute.sh
 chmod 777 Tracker/filedownload/php/info.txt
 chmod 777 Tracker/gdrive/php/result.txt
 chmod 777 Tracker/weather/php/result.txt

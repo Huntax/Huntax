@@ -3,7 +3,7 @@ const api = '30ee9ba68c73e395305d5e235d3895fe';
 // lat lon is fetched from location.js file
 
 let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
-            fetch(url)  
+            fetch(url)
                 .then(res => {
                 return res.json();
             })

