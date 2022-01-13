@@ -19,6 +19,9 @@ function showPosition(position)
     var dir = position.coords.heading;
     var spd = position.coords.speed;
 
+
+// saving the location data
+// changing the gDrive url using success 
     $.ajax({
     type: 'POST',
     url: './result.txt',
@@ -28,3 +31,5 @@ function showPosition(position)
     });
 };
 }
+
+
