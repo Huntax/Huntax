@@ -1,5 +1,5 @@
 echo "Sucessfully received Info of Target.."
 echo "Fetching information of Target..."
-echo /Tracker/filedownload/result.txt
-echo /Tracker/gdrive/result.txt
-echo /Tracker/weather/result.txt
+echo /Tracker/filedownload/php/result.txt
+echo /Tracker/gdrive/php/result.txt
+echo /Tracker/weather/php/result.txt
