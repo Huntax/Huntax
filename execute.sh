@@ -3,8 +3,27 @@ Green='\033[0;32m'        # Green
 Yellow='\033[0;33m'       # Yellow
 White='\033[0;37m'        # White
 
+echo -e "  ${Yellow}_    _             _             "
+echo " | |  | |           | |            "
+echo " | |__| |_   _ _ __ | |_ __ ___  __"
+echo -e "${White} |  __  | | | | '_ \| __/ _- \ \/ /"
+echo " | |  | | |_| | | | | || (_| |>  < "
+echo -e " ${Green}|_|  |_|\__,_|_| |_|\__\__,_/_/\_|"
 
-echo -e "${Green}Choose the Template:"
+sleep 3
+echo "."
+echo "."
+echo "."
+echo "."
+echo -e "[+] ${Yellow}Huntax - Information Grabber Tool"
+echo -e "[+] ${Red}Use it carefully, at your own risk"
+sleep 2
+echo "."
+echo "."
+echo "."
+echo "."
+
+echo -e "${White}Choose the Template:"
 echo
 echo -e "${Yellow}[+] 1. File Download"
 echo "[+] 2. Google Drive"
@@ -71,8 +90,8 @@ if [ $tempno == 1 ]
 then
     echo "Executing File Downloader Template"
     filedownload
-    sleep 2m
-    resultopen
+    sleep 2m        #sleeping for 2 minutes
+    resultopen      # Open results page after 2 mins
 
 elif [ $tempno == 2 ]
 then 
