@@ -15,6 +15,8 @@ An Impending tool for Beginners | Hunt down your target by grabbing crucial info
 ```bash
 git clone https://github.com/huntax/huntax.git
 cd huntax/
+Chmod 777 install.sh
+./install.sh
 ```
     
 ## Features 💡
@@ -25,7 +27,15 @@ cd huntax/
 - Browser Info
 - OS Info Tracking
 
+## Usage 💡
 
+```
+./execute.sh
+```
+- ##### Choose a template 
+
+- ##### If Google Drive, replace with a Google drive link to forward user to that link after retrieving info  
+&nbsp;
 ## Contributing
 
 Contributions are always welcome!
@@ -50,6 +60,5 @@ Currently I'm a Intermidate in Javascript, so it's the basic language that's use
 As I'm not experienced, It's really getting hard for me to learn these all by my own. Any help in building this Open source tool would be appriciated. 
 ## Badges
 
-![Package Control](https://img.shields.io/packagecontrol/dm/huntax) 
-
+![Github all releases](https://img.shields.io/github/downloads/huntax/huntax/total.svg)
 ![GitHub Repo stars](https://img.shields.io/github/stars/huntax/huntax)
