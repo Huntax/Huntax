@@ -33,6 +33,12 @@ filedownload(){
 
 gdrive(){
 
+    read -p ">> Enter Google Drive File URL: " gdriveurl  #receiving replaceable drive url
+    cd Tracker/gdrive
+    sed -i "s/oldurl/$gdriveurl" index.html
+    echo "Success, Google Drive url injected.."
+    echo "."
+    echo "."
     echo "Starting PHP Server..."
     cd /Tracker/gdrive
     php -S 127.0.0.1:8000
