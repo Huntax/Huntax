@@ -10,8 +10,6 @@ echo '    PHP'
 apt-get -y install php
 echo '    Requests'
 pip3 install requests
-echo '    JS'
-sudo apt install nodejs npm
 echo
 echo '[!] Setting Permissions...'
 chmod 777 Tracker/result.txt
