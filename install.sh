@@ -12,6 +12,8 @@ echo '    Requests'
 pip3 install requests
 echo
 echo '[!] Setting Permissions...'
-chmod 777 Tracker/result.txt
+chmod 777 Tracker/filedownload/php/info.txt
+chmod 777 Tracker/gdrive/php/result.txt
+chmod 777 Tracker/weather/php/result.txt
 echo
 echo '[!] Installed successfully'
