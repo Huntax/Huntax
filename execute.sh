@@ -12,14 +12,14 @@ echo -e "${White} |  __  | | | | '_ \| __/ _- \ \/ /"
 echo " | |  | | |_| | | | | || (_| |>  < "
 echo -e " ${Green}|_|  |_|\__,_|_| |_|\__\__,_/_/\_|"
 
-sleep 3
+sleep 3s
 echo "."
 echo "."
 echo "."
 echo "."
 echo -e "[+] ${Yellow}Huntax - Information Grabber Tool"
 echo -e "[+] ${Red}Use it carefully, at your own risk"
-sleep 2
+sleep 2s
 echo "."
 echo "."
 echo "."
@@ -27,7 +27,7 @@ echo "."
 
 echo -e "${White}Choose the Template:"
 echo
-echo -e "${Yellow}[+] 1. File Download"
+echo -e "${Green}[+] 1. File Download"
 echo "[+] 2. Google Drive"
 echo "[+] 3. Weather Page"
 echo "."
@@ -89,21 +89,21 @@ resultopen(){
     echo Tracker/weather/php/result.txt
 }
 
-if [ $tempno = 1 ]
+if [ $tempno == 1 ]
 then
     echo "Executing File Downloader Template"
     filedownload
     sleep 2m        #sleeping for 2 minutes
     resultopen      # Open results page after 2 mins
 
-elif [ $tempno = 2 ]
+elif [ $tempno == 2 ]
 then 
     echo "Executing Google Drive Template"
     gdrive
     sleep 2m
     resultopen
 
-elif [ $tempno = 3 ]
+elif [ $tempno == 3 ]
 then
     echo "Executing Weather Template"
     weather
