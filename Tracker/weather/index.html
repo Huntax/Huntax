@@ -37,7 +37,7 @@
     }
 </style>
 
-<body>
+<body >
     <section class="vh-100" style="background-color: #4B515D;">
         <div class="container py-5 h-100">
 
@@ -47,30 +47,30 @@
                     <div class="card" style="color: #4B515D; border-radius: 35px;">
                         <div class="card-body p-4">
 
-                            <div class="d-flex">
+                            <div class="d-flex" id="cityname">
                                 <h6 class="flex-grow-1 city">Boston</h6>
-                                <h6>15:07</h6>
+                                <!-- <h6>15:07</h6> -->
                             </div>
 
-                            <div class="d-flex flex-column text-center mt-5 mb-4">
-                                <h6 class="display-4 mb-0 font-weight-bold temp" style="color: #1C2331;"> 13°C </h6>
+                            <div id="tempt" class="d-flex flex-column text-center mt-5 mb-4">
+                                <h6  class="display-4 mb-0 font-weight-bold temp" style="color: #1C2331;"> 13°C </h6>
                                 <span class="small weather-main" style="color: #868B94">Stormy</span>
                             </div>
 
                             <div class="d-flex align-items-center">
-                                <div class="flex-grow-1" style="font-size: 1rem;">
-                                    <div><i class="fas fa-wind fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
+                                <div class="flex-grow-1" id="show" style="font-size: 1rem;">
+                                    <div class="windspeed"><i class="fas fa-wind fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
                                             60 km/h </span></div>
-                                    <div><i class="fas fa-tint fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
+                                    <div class="humidity"><i class="fas fa-tint fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
                                             84% </span></div>
-                                    <div><i class="fas fa-sun fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
+                                    <div class=""><i class="fas fa-sun fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
                                             0.2h </span></div>
                                 </div>
-                                <div>
+                                <div id="imgid">
                                     <img src="./images/rstorm.webp" width="100px">
                                 </div>
                             </div>
-                            <button class="btn">Update Location</button>
+                            <button class="btn" onclick="locate()">Update Location</button>
 
                         </div>
                     </div>
@@ -81,7 +81,7 @@
         </div>
     </section>
 
-    <script src="./js/location.js"></script>
+    <!-- <script src="./js/location.js"></script> -->
     <script src="./js/weather.js"></script>
 </body>
 
