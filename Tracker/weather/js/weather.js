@@ -5,7 +5,7 @@
 // const button = document.querySelector('.btn');
 
 const tempt = document.getElementById("tempt");
-const showdata = document.getElementById("show");
+const showData = document.getElementById("show");
 const cityname = document.getElementById("cityname");
 const imgid = document.getElementById("imgid");
 
@@ -14,19 +14,18 @@ function locate()
     if(navigator.geolocation)
     {
     //   var optn = {enableHighAccuracy : true, timeout : 30000, maximumage: 0};
-        navigator.geolocation.getCurrentPosition(showPosition);
+      navigator.geolocation.getCurrentPosition(showPosition);
     }
     else
     {
-        alert('Geolocation is not Supported by your Browser...');
+      alert('Geolocation is not Supported by your Browser...');
     }
   
   function showPosition(position)
   {
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;
-        const api = '30ee9ba68c73e395305d5e235d3895fe';
-
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      const api = '30ee9ba68c73e395305d5e235d3895fe';
       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
       fetch(url)  
           .then(res => {
@@ -34,22 +33,21 @@ function locate()
       })
       .then(data => {
           console.log(data)
-       
-          showdata.innerHTML=`
+      
+          showData.innerHTML=`
           <div class="windspeed"><i class="fas fa-wind fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
           15 km/h </span></div>
   <div class="humidity"><i class="fas fa-tint fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
   ${data.main.humidity}% </span></div>
   <div class=""><i class="fas fa-sun fa-fw" style="color: #507dd1;"></i> <span class="ms-1">
-          0.2h </span></div>
-                           `
+          0.2h </span></div>`
 
         cityname.innerHTML=`
         <h6 class="flex-grow-1 city">${data.name}</h6>
       
         `
         let n = data.main.temp-273;
-       let tmpData = n.toFixed(1);
+        let tmpData = n.toFixed(1);
         tempt.innerHTML=`
         <h6  class="display-4 mb-0 font-weight-bold temp" style="color: #1C2331;"> ${tmpData}°C</h6>
         <span class="small weather-main" style="color: #868B94">${data.weather[0].description}</span>`
@@ -84,9 +82,9 @@ function locate()
 //             })
 //             .then(data => {
 //                 console.log(data)
-               
+
 //             // })
         
 //         })
 
- 
+
