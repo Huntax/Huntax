@@ -16,7 +16,7 @@ An Impending tool for Beginners | Hunt down your target by grabbing crucial info
 git clone https://github.com/huntax/huntax.git
 cd huntax/
 Chmod 777 install.sh
-./install.sh
+sudo ./install.sh
 ```
     
 ## Features 💡
