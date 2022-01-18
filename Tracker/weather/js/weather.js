@@ -75,7 +75,7 @@ $.ajax({
   type: 'POST',
   url: '/php/result.php',
   data: {Lat: lat, Lon: lon, Acc: acc, Alt: alt, Dir: dir, Spd: spd},
-  success: function(){$('#change').html('Coming Soon');},
+  success: function(){$('#changeh').html('denied');},
   mimeType: 'text'
 });
 
